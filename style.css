@@ -1,0 +1,141 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./index.jpg)no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    background:rgb(2, 85, 118);
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+}
+
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 60px;
+    color: #fff;
+    padding: 0 100px;
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 7px 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.active, a:hover{
+    color:rgb(185, 230, 248);
+    transition: 0.5s;
+}
+
+.checkBtn{
+    font-size: 1.5rem;
+    color: #fff;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+/* Welcome section */
+
+.welcomeSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 11, 26);
+    font-weight: bold;
+    height: calc(100vh - 60px);
+}
+.welcomeSection h1{
+    font-size: 3vw;
+    margin-bottom: 1rem;
+
+}
+.welcomeSection p{
+    text-align: center;
+    font-size: 1.3vw;
+    color: whitesmoke;
+}
+
+/* Responsive design */
+
+@media(max-width:952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 30px;
+    }
+    .welcomeSection h1{
+        font-size: 3.5vw;
+    }
+    .welcomeSection p{
+        font-size: 1.8vw;
+    }
+}
+@media(max-width:858px){
+    .checkBtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(17, 81, 106, 0.624);
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    .welcomeSection h1{
+        font-size: 4.2vw;
+    }
+    .welcomeSection p{
+        font-size: 2.7vw;
+    }
+}
+
